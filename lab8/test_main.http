@@ -1,0 +1,67 @@
+@baseUrl = http://127.0.0.1:8000
+
+### Root
+GET {{baseUrl}}/
+Accept: application/json
+
+### /hello/{name}
+GET {{baseUrl}}/hello/User
+Accept: application/json
+
+### /greet/{name}
+GET {{baseUrl}}/greet/Student
+Accept: application/json
+
+### /search?query=
+GET {{baseUrl}}/search?query=fastapi
+Accept: application/json
+
+### /json
+GET {{baseUrl}}/json
+Accept: application/json
+
+### /file (save response to file)
+GET {{baseUrl}}/file
+Accept: text/plain
+> ./downloaded_sample.txt
+
+### /redirect (should redirect to /)
+GET {{baseUrl}}/redirect
+Accept: application/json
+
+### /headers (send a custom header)
+GET {{baseUrl}}/headers
+Accept: application/json
+X-Demo-Header: hello-from-http-client
+
+### /set-cookie (sets username cookie)
+GET {{baseUrl}}/set-cookie
+Accept: application/json
+
+### /get-cookie (returns username cookie if present)
+GET {{baseUrl}}/get-cookie
+Accept: application/json
+
+### /login (form)
+POST {{baseUrl}}/login
+Content-Type: application/x-www-form-urlencoded
+
+username=alice&password=secret
+
+### /register (json)
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "email": "newuser@example.com",
+  "password": "strongpass"
+}
+
+### /users
+GET {{baseUrl}}/users
+Accept: application/json
+
+### /users/{id}
+GET {{baseUrl}}/users/2
+Accept: application/json
