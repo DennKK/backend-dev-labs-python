@@ -1,0 +1,25 @@
+# Зависимости для Lab 9 - SQLAlchemy Integration
+# Установка: pip install -r requirements.txt
+
+# FastAPI и сервер
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# SQLAlchemy ORM
+sqlalchemy==2.0.23
+
+# Pydantic с поддержкой email валидации
+pydantic==2.5.0
+email-validator==2.1.0
+
+# Для работы с SQLite (встроен в Python, но можно указать явно)
+# Для других БД раскомментируйте нужные:
+
+# PostgreSQL
+# psycopg2-binary==2.9.9
+
+# MySQL
+# pymysql==1.1.0
+
+# MSSQL
+# pyodbc==5.0.1
